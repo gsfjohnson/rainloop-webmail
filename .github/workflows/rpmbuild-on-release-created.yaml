@@ -8,8 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - uses: redwain/rpmbuild@el6
+      with:
+        spec_path: 'rainloop.spec'
     - uses: redwain/rpmbuild@el7
-      id: rpm
       with:
         spec_path: 'rainloop.spec'
     - uses: redwain/upload-release-asset@master
