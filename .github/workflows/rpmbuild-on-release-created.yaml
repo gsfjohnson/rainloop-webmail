@@ -11,7 +11,7 @@ jobs:
     - uses: redwain/rpmbuild@el7
       id: rpm
       with:
-        spec_file: 'rainloop.spec'
+        spec_path: 'rainloop.spec'
     - uses: redwain/upload-release-asset@master
       with:
         files: 'rpmbuild/SRPMS/*.rpm;rpmbuild/RPMS/*.rpm'
