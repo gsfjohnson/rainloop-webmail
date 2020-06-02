@@ -5,7 +5,7 @@ Summary:        Simple, modern & fast web-based email client.
 License:        AGPLv3+
 Group:          Networking/WWW
 URL:            http://rainloop.net
-Source0:        https://github.com/Rainloop/rainloop-webmail/releases/download/v%{version}/%{name}-community-%{version}.zip
+Source:         https://github.com/Rainloop/rainloop-webmail/releases/download/v%{version}/%{name}-community-%{version}.zip
 Requires:       httpd
 Requires:       php
 #Requires:       php-mysql
@@ -22,9 +22,10 @@ all these make RainLoop Webmail a perfect choice for your email solution.
 
 %prep
 rm -rf %{name}-%{version}
-mkdir %{name}-%{version}
-cd %{name}-%{version}
-unzip %{SOURCE0}
+#mkdir %{name}-%{version}
+#cd %{name}-%{version}
+#unzip %{SOURCE0}
+%setup
 
 %build
 # Nothing to do!!
